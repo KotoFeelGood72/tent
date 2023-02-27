@@ -39,6 +39,7 @@ $(window).on('load', function () {
 	maskInit();
 	checkSubmenu();
 	modal();
+	invertColor();
 
 	maps('Краснодар', 'Солнечная 25', [34, 48])
 });
