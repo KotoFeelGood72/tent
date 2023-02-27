@@ -1,0 +1,112 @@
+.pageContacts {
+	position: relative;
+}
+.section_in {
+}
+.pageContacts_main {
+
+}
+.pageContacts_content {
+	max-width: 35rem;
+	@include bp($point_2) {
+		max-width: 100%;
+		margin-bottom: 5rem;
+	}
+}
+.pageContacts_info {
+	margin-bottom: 6rem;
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+		grid-gap: 2rem;
+	}
+}
+.pageContacts_item {
+	@include flex-start;
+	flex-direction: column;
+	align-items: flex-start;
+
+	span {
+		opacity: .7;
+		margin-bottom: 2rem;
+		@include bp($point_2) {
+			margin-bottom: 1rem;
+		}
+		@include bp($point_4) {
+			font-size: 1.4rem;
+		}
+	}
+	a {
+		font-size: 2.5rem;
+		font-family: $font_2;
+		font-weight: 500;
+		@include bp($point_2) {
+			font-size: 2rem;
+		}
+		@include bp($point_4) {
+			font-size: 1.6rem;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+		@include bp($point_2) {
+			margin-bottom: 3rem;
+		}
+	}
+	&:last-child {
+		pointer-events: none;
+	}
+}
+.pageContacts_social {
+	margin-bottom: 6.3rem;
+	span {
+		opacity: .7;
+		margin-bottom: 3rem;
+		display: block;
+		@include bp($point_4) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	ul {
+		@include flex-start;
+
+
+		li {
+			max-width: 3.7rem;
+			&:not(:last-child) {
+				margin-right: 4.7rem;
+				@include bp($point_4) {
+					margin-right: 2rem;
+				}
+			}
+			a {
+				display: block;
+				@include bp($point_4) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.pageContacts_map {
+	max-width: 102.4rem;
+	width: 100%;
+	height: 59.3rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+	@include bp($point_2) {
+		position: static;
+		max-width: 100%;
+		max-height: 40rem;
+	}
+	@include bp($point_4) {
+		max-height: 30rem;
+	}
+	#map {
+		width: 100%;
+		height: 100%;
+	}
+}

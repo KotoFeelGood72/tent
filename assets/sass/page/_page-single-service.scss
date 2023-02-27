@@ -1,0 +1,140 @@
+.singleService_hero {
+	@include bp($point_4) {
+		position: relative;
+		margin-top: -10.1rem;
+		padding-top: $m10;
+		margin-bottom: 8rem;
+	}
+}
+
+
+.singleService_banner {
+	position: absolute;
+	top: $header;
+	left: 0;
+	width: 100%;
+	@include z-index(el);
+	height: 86rem;
+	@include bp($point_2) {
+		max-height: 60rem;
+		height: 100%;
+		top: 0;
+	}
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+		background: linear-gradient(94.3deg, rgba(0, 15, 40, 0.8) 0.69%, rgba(0, 15, 40, 0) 123.02%);
+	}
+	img {
+		object-fit: cover;
+		height: 100%;
+	}
+}
+
+.singleService_heroMain {
+	max-width: 68.6rem;
+	padding-bottom: 33.5rem;
+	margin-bottom: $m15;
+	@include bp($point_2) {
+		margin-bottom: $m10;
+		padding-bottom: $m15;
+	}
+	@include bp($point_4) {
+		// height: 100vh;
+		padding: 2rem 0 8rem 0;
+		margin-bottom: 0;
+		// margin-bottom: 0;
+	}
+	span {
+		font-size: 2.5rem;
+		font-family: $font_2;
+		display: block;
+		margin: 2rem 0 3rem 0;
+		@include bp($point_2) {
+			font-size: 2.2rem;
+		}
+	} 
+	&>p {
+		margin-bottom: 6rem;
+	}
+}
+
+.singleService_desc {
+	margin-bottom: $m15;
+	@include bp($point_2) {
+		margin-bottom: $m10;
+	}
+	h2, h3, h4, h5, h6 {
+		margin-bottom: 3rem;
+	}
+	* {
+		&:not(h2, h3, h4, h5, h6) {
+			opacity: .7;
+		}
+	}
+}
+.global_txt {
+}
+.singleService_gallery {
+
+	h5 {
+		margin-bottom: 6rem;
+		@include bp($point_4) {
+			margin-bottom: 3rem;
+		}
+	}
+}
+.singleService_grid {
+	display: grid;
+	grid-template-areas: 
+							"img1 img1 img2"
+							"img1 img1 img3";
+	grid-gap: 3rem;
+	margin-bottom: 6rem;
+	@include bp($point_4) {
+		display: flex;
+		flex-wrap: wrap;
+		grid-gap: 0;
+		margin: -1rem -1rem 2rem 0;
+	}
+	li {
+		width: 100%;
+		@include animate-default($txt: 'Просмотреть');
+
+		@include bp($point_4) {
+			// width: 45%;
+			flex: 50%;
+			padding: 1rem 1rem 0 0;
+		}
+		a {
+			display: block;
+		}
+		&:nth-child(1n) {
+			height: 61.2rem;
+			grid-area: img1;
+		}
+		&:nth-child(2n) {
+			grid-area: img2;
+			height: 29.1rem;
+		}
+		&:nth-child(3n) {
+			grid-area: img3;
+			height: 29.1rem;
+		}
+
+		@include bp($point_2) {
+			height: auto!important;
+		}
+	}
+}
+.arr_dir_bottom {
+	.global_btn_icon {
+		transform: rotate(90deg);
+	}
+}
+.loadmore_gallery {
+}

@@ -1,0 +1,76 @@
+.wave {
+  background: rgba(255, 255, 255, .4);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: wave .5s linear;
+  pointer-events: none;
+  position: absolute;
+	filter: invert(1);
+}
+
+@keyframes wave {
+  100% {
+   transform: scale(2);
+   opacity: 0;
+  }
+}
+
+
+
+
+.btn {
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+.btn-global {
+	position: relative;
+	border: .1rem solid $white;
+	display: inline-flex;
+	overflow: hidden;
+	a, button {
+		padding: 2rem 5.1rem;
+		@include flex-center;
+		transition: all .3s ease;
+		color: $white;
+		width: 100%;
+		@include bp($point_2) {
+			padding: 1.5rem 3rem;
+		}
+		@include bp($point_4) {
+			padding: 1rem 2rem;
+		}
+		p {
+			margin-right: 1.5rem;
+			font-size: 2rem;
+			font-family: $font_1;
+			transition: all .3s ease;
+			line-height: 2.7rem;
+			@include bp($point_4) {
+				font-size: 1.6rem;
+			}
+		}
+		
+		svg {
+			width: 2.7rem;
+			transition: all .3s ease;
+			@include bp($point_4) {
+				max-width: 2rem;
+			}
+		}
+	}
+	&:hover {
+		a, button {
+			background-color: $white;
+		}
+		p {
+			color: $dark;
+		}
+		svg {
+			color: $dark!important;
+		}
+	}
+}
+.btn_arr {
+	position: relative;
+}

@@ -1,0 +1,18 @@
+extends _layout
+
+block vars
+	- array = {body_class:'light', layout_mod:'', sub_keywords:'', title_inner:'Tents - Website " Services "'}
+block content_block
+	+bread(['Главная'], 'Услуги', {visible: true})
+	section.pageServices 
+		.section_in 
+			.pageServices_main 
+				ul.homeservice_list
+					-for(i = 0; i < 4; i++)
+						- let title = ['Аренда шатров', 'Пошив боковых стен для шатров ', 'Брендирование', 'Сумки для шатров'] 
+						- let img = 'service_' + i
+						+serviceCard({
+							title: 'Сумки для шатров',
+							img: img,
+							price: '20 000'
+						})

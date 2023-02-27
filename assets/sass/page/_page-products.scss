@@ -1,0 +1,124 @@
+.products {
+}
+.section_in {
+}
+.products_grid {
+	@include bp($point_4) {}
+}
+.products_item {
+	background-color: $dark-light;
+
+	.btn-global {
+		width: 100%;
+		a {
+			width: 100%;
+		}
+	}
+}
+.products_item_img {
+	width: 100%;
+	height: 28.7rem;
+	@include bp($point_4) {
+		max-height: 15rem;
+	}
+	img {
+		object-fit: cover;
+		height: 100%;
+	}
+}
+.products_item_content {
+	padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+
+	@include bp($point_2) {
+		padding: 1.5rem 2rem;
+	}
+
+	@include bp($point_4) {
+		padding: 1rem;
+	}
+
+	h3 {
+		font-size: 2.3rem;
+		font-family: $font_3;
+		font-weight: 600;
+		@include bp($point_2) {
+			font-size: 2rem;
+		}
+		@include bp($point_4) {
+			font-size: 1.4rem;
+		}
+	}
+
+	span {
+		display: block;
+		opacity: .7;
+		margin: 1rem 0 2rem 0;
+		font-size: 1.8rem;
+		@include bp($point_2) {
+			font-size: 1.6rem;
+			margin: .9rem 0 1rem 0;
+		}
+		@include bp($point_4) {
+			font-size: 1.2rem;
+		}
+	}
+
+	&>p {
+		font-size: 2.3rem;
+		font-family: $font_3;
+		font-weight: 600;
+		margin-bottom: 3.5rem;
+		@include bp($point_2) {
+			font-size: 2rem;
+		}
+		@include bp($point_4) {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	@include mobileLink;
+	.btn-global {
+		button {
+			@include bp($point_4) {
+				padding: 0;
+				justify-content: flex-start;
+			}
+			p {
+				@include bp($point_4) {
+					font-size: 1.4rem!important;
+				}
+			}
+		}
+	}
+}
+.btn-global {
+}
+.btn {
+}
+.btn_arr {
+}
+.global_btn_icon {
+}
+.icon {
+}
+.icon-arrow-right-work {
+}
+.pag_block {
+}
+.pag_list {
+}
+.pag_item {
+}
+.prev_mod {
+}
+.pag_link {
+}
+.icon-arrow-pagination-right {
+}
+.active_mod {
+}
+.dots_mod {
+}
+.next_mod {
+}

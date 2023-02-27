@@ -1,0 +1,53 @@
+.popup.popup_form(data-id="form") 
+	.popup_bg.popup_form_bg.remove 
+	.popup_main.popup_form_main 
+		.popup_close.remove 
+			+icon('close')
+		.action_form_head 
+			h5 Форма обратной связи
+			p Укажите ваши контактные данные
+		form.action_form(action="/")
+			+input({
+				place: 'Ваше имя',
+				class: 'action',
+			})
+			+input({
+				place: 'Ваш телефон',
+				class: 'action',
+				type: 'tel'
+			})
+			+input({
+				class: 'action',
+				btn: true,
+			})
+			+policy({})
+
+.burger.popup(data-id="burger")
+	.burger_bg.remove 
+	.burger_main
+		.burger_close.remove 
+			+icon('close') 
+		.burger_logo 
+			img(src="i/logo.svg", alt="")
+		nav.header_nav
+				ul.header_nav_list 
+					each item, i in ['Главная', 'Каталог', 'Услуги', 'Портфолио', 'Контакты']
+						if i === 1
+							li 
+								a(href="#")=item
+								ul.sub-menu
+									each submenu in ['Мобильные шатры', 'Тенты для мобильных шатров', 'Аксессуары для шатров', 'Зонты пляжные']
+										li 
+											a(href="#")=submenu
+						else 
+							li 
+								a(href="#")=item
+		.pageContacts_social 
+			span Соцсети:
+			ul 
+				each item in ['wa', 'tg', 'vk']
+					li 
+						a(href="#")
+							+icon(item)
+		.header_phone 
+			a(href="tel:+7 000 000 00 00") +7 000 000 00 00

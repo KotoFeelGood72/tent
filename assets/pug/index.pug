@@ -1,0 +1,158 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Tents - Website'}
+block content_block
+	section.hero(data-aos="fade-in")  
+		.hero_slider_w
+			.heroNav 
+				.heroNav_btn.prevSlide 
+					+icon('nextEl') 
+				.heroNav_btn.nextSlide 
+					+icon('nextEl') 
+			.hero_slider.swiper
+				.swiper-wrapper
+					-for(i = 0; i < 2; i++)
+						- let slideImg = 'i/hero_bg_' + i + '.jpg'
+							.swiper-slide
+								.hero_slide_w 
+									.hero_slide_bg 
+										img(src=slideImg  alt="")
+									.section_in
+										.hero_slide 
+											.hero_content
+												.hero_title 
+													h1 Изготовление мобильных шатров и пляжных зонтов
+												.hero_txt.global_txt
+													p Профессиональное и качественное воплощение идей наших клиентов, создание качественных шатров, тентов и мембранных конструкций.
+												if i != 1
+													+btn({
+														link: true,
+														name: 'Перейти в каталог',
+														class: 'btn_arr',
+													})
+												else 
+													+btn({
+														name: 'Заказать услугу',
+														class: 'btn_arr trigger',
+														target: 'form'
+													})
+											if i != 1
+												.hero_form_w
+													h2 Бесплатная консультация
+													p Оставьте заявку, и мы свяжемся с вами!
+													form.hero_form(action="/")
+														+input({
+															place: 'Ваше имя',
+															class: 'hero',
+														})
+														+input({
+															place: 'Ваш телефон',
+															class: 'hero',
+															type: 'tel'
+														})
+														+input({
+															class: 'hero',
+															btn: true,
+														})
+														+policy({})
+				.hero_nav 
+					.hero_scrollbar 
+					.hero_pagination.gallery_pagination
+	section.popular(data-aos="fade-up")
+		.section_in 
+			.popular_main 
+				.popular_head 
+					h2 Популярные шатры
+					+btn({
+							link: true,
+							name: 'Показать все шатры',
+							class: 'btn_arr'
+						})
+				ul.popular_list.mod_grid_3 
+					-for(i = 0; i < 6; i++)
+						- let prodImg = ['mobile', 'happy', 'trans', 'events', 'sale', 'moto']
+						- let prodName = ['Мобильные шатры', 'Шатры для свадеб и банкетов', 'Шатры-трансформеры', 'Шатры для городских мероприятий', 'Шатры для торговли и ярмарки', 'Шатры для автоспорта и мотоспорта']
+							+sub({
+								img: prodImg[i],
+								name: prodName[i]
+							})
+	section.step(data-aos="fade-up") 
+		.section_in
+			.step_main 
+				.step_head 
+					h3 Создаем действительно качественные решения для вашего бизнеса
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+				ul.step_list 
+					-
+						let stepList = [
+							{
+								num: '01',
+								name: 'Опыт и цена',
+								txt: 'Работаем больше 7 лет. Низкая цена за счет прямых поставок из Китая.'
+							},
+							{
+								num: '02',
+								name: 'Уникальность',
+								txt: 'Индивидуальный пошив, брендирование (нанесение, типография) любой сложности.'
+							},
+							{
+								num: '03',
+								name: 'Доставка',
+								txt: 'Доставка по России СНГ. Налаженная логистика, что позволяет быстро доставить груз.'
+							},
+							{
+								num: '04',
+								name: 'Клиенты',
+								txt: 'Обслужили более 12000 физ. лиц и более 5000 крупных юридических фирм по России.'
+							},
+						]
+					each stepItem in stepList 
+						li 
+							p=stepItem.num
+							h4=stepItem.name 
+							span=stepItem.txt
+	section.homeservice(data-aos="fade-up") 
+		.section_in 
+			.homeservice_main
+				.section_title
+					h4 Услуги
+				ul.homeservice_list
+					-for(i = 0; i < 4; i++)
+						- let title = ['Аренда шатров', 'Пошив боковых стен для шатров ', 'Брендирование', 'Сумки для шатров'] 
+						- let img = 'service_' + i
+						+serviceCard({
+							title: 'Сумки для шатров',
+							img: img,
+							price: '20 000'
+						})
+	+gallery({
+		count: '5',
+		img: 'gallery',
+		class: 'galleryWork',
+		title: 'Галерея работ'
+	})
+	include interface/action
+	section.trust 
+		.section_in 
+			.trust_main(data-aos="fade-up") 
+				.trust_head 
+					.trust_title 
+						h6 Нам доверяют
+					.trust_head_content.global_txt 
+						p У нас широкий список крупных и известных партнеров по всей России. За все время работы мы обслужили более 12000 физических лиц и более 5000 крупных юридических фирм. Нас ценят за грамотный подход к работе, высокое качество, скорость и продуманную логистику.
+				.trust_slider_w(data-aos="fade-up")
+					.gallery_nav(class=`brand_nav`) 
+						.gallery_nav_btn(class=`brand_prev`)
+							+icon('prev')
+						.gallery_nav_btn(class=`brand_next`)
+							+icon('prev') 
+					.trust_slider.swiper
+						.swiper-wrapper 
+							-for(i = 0; i < 5; i++)
+								- let trust = 'i/trust_' + i + '.png'
+									.swiper-slide
+											.trust_slide 
+												img(src=trust, alt="")
+	+seo({class: 'm10'})
+	

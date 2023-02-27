@@ -1,0 +1,17 @@
+extends _layout
+
+block vars
+	- array = {body_class:'light', layout_mod:'', sub_keywords:'', title_inner:'Tents - Shop Website'}
+block content_block
+	+bread(['Главная'], 'Каталог', {visible: true})
+	section.shop 
+		.section_in 
+			.shop_main 
+				ul.shop_grid.mod_grid_2
+					-for(i = 0; i < 4; i++)
+						- let prodImg = ['cat_0', 'cat_1', 'cat_2', 'cat_3']
+						- let prodName = ['Мобильные шатры', 'Зонты пляжные', 'Тенты (крыши) для мобильных шатров', 'Аксессуары  для шатров (сумки и др.)']
+							+sub({
+								img: prodImg[i],
+								name: prodName[i]
+							})

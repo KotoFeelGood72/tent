@@ -1,0 +1,14 @@
+extends _layout
+
+block vars
+	- array = {body_class:'light', layout_mod:'', sub_keywords:'', title_inner:'Tents - Category Website'}
+block content_block
+	section.notfound(data-aos="fade-up")
+		.section_in 
+			.notfound_main 
+				h1 Ошибка 404
+				p Такой страницы не существует!
+				+btn({
+					name: 'Вернуться на главную',
+					class: 'btn_arr'
+				})

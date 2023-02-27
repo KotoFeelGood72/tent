@@ -1,0 +1,40 @@
+.global_input {
+	margin-bottom: 2rem;
+	input {
+		@include app;
+		width: 100%;
+		background-color: $white;
+		padding: 1.7rem 2.2rem;
+		color: $dark;
+		font-size: 1.8rem;
+		@include bp($point_4) {
+			font-size: 1.4rem;
+			padding: 1.5rem 2rem;
+		}
+	}
+}
+
+.global_btn  {
+	width: 100%;
+	margin-bottom: 1.5rem;
+	input {
+		@include app;
+		color: $white;
+		border: .1rem solid $white;
+		padding: 1.7rem 2.2rem;
+		@include flex-center;
+		width: 100%;
+		cursor: pointer;
+		transition: all .2s ease;
+		font-family: $font_3;
+		font-size: 1.8rem;
+		@include bp($point_4) {
+			font-size: 1.4rem;
+			padding: 1.5rem 2rem;
+		}
+		&:hover {
+			background-color: $white;
+			color: $dark;
+		}
+	}
+}

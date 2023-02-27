@@ -1,0 +1,109 @@
+extends _layout
+
+block vars
+	- array = {body_class:'light', layout_mod:'', sub_keywords:'', title_inner:'Tents - Website " Products "'}
+block content_block
+	+bread(['Главная', 'Каталог', 'Мобильные шатры', 'Шатры для свадеб и банкетов'], 'Шатер для свадьбы 209')
+	section.singleProducts(data-aos="fade-in") 
+		.section_in 
+			.singleProducts_main
+				.singleProducts_contentHead 
+					h1 Шатер для свадьбы 209
+					p 200 кв.м.
+					.singleColor_variable
+						p.small-title Варианты цветов:
+						ul 
+							li 
+								input(type="radio" name="colorVar" id="#C0BB9E" checked)
+								label(for="#C0BB9E" style="background-color: #C0BB9E;" class="colorVar")
+									.color_icon
+										+icon('check-color')
+							li 
+								input(type="radio" name="colorVar" id="#FFFFFF")
+								label(for="#FFFFFF" style="background-color: #FFFFFF;" class="colorVar")
+									.color_icon
+										+icon('check-color')
+							li 
+								input(type="radio" name="colorVar" id="#009D23")
+								label(for="#009D23" style="background-color: #009D23;" class="colorVar")
+									.color_icon
+										+icon('check-color')
+							li 
+								input(type="radio" name="colorVar" id="#C63838")
+								label(for="#C63838" style="background-color: #C63838;" class="colorVar")
+									.color_icon
+										+icon('check-color')
+							li 
+								input(type="radio" name="colorVar" id="#3665DD")
+								label(for="#3665DD" style="background-color: #3665DD;" class="colorVar")
+									.color_icon
+										+icon('check-color')
+							li 
+								input(type="radio" name="colorVar" id="#161616")
+								label(for="#161616" style="background-color: #161616;" class="colorVar")
+									.color_icon
+										+icon('check-color')
+						span *Мы можем сделать любой цвет за отдельную плату!
+					.singleProducts_price_w 
+						p 120 000 руб.
+						+btn({
+							name: 'Заказать',
+							class: 'btn_arr'
+						})
+				.singleProducts_banner 
+					img(src="i/products.jpg", alt="")
+			.singleParam(data-aos="fade-up") 
+				h2 Характеристики
+				ul.singleParam_list 
+					-for(i = 0; i < 8; i++)
+						li 
+							span Характеристика
+							span Значение характеристики
+				+seo({class: 'm15'})
+	+gallery({
+		count: '3',
+		img: 'gallery',
+		class: 'galleryWork',
+		title: 'Фотогалерея'
+	})
+	section.videos(data-aos="fade-up") 
+		.section_in 
+			.videos_main 
+				h4 Чем отличаются наши шатры
+				.video_w
+					a(href="https://www.youtube.com/watch?v=dM73uimGaTg" data-fancybox)
+						img(src="i/video.jpg", alt="")
+						.video_icon_play 
+							img(src="i/play.jpg", alt="")
+	include interface/action
+	section.other(data-aos="fade-up") 
+		.section_in 
+			.other_main
+				.gallery_head 
+					.gallery_title 
+						h4 Аксессуары
+					.gallery_nav(class=`other_nav`) 
+						.gallery_nav_btn(class=`other_nav_prev`)
+							+icon('prev')
+						.gallery_nav_btn(class=`other_nav_next`)
+							+icon('prev')
+				.other_slider_w 
+					.other_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 12; i++)
+								.swiper-slide 
+									.products_item 
+										a(href="#")
+											.products_item_img 
+												img(src="i/products.jpg", alt="")
+											.products_item_content
+												h3 Шатер для свадьбы 209
+												span 200 кв.м.
+												p 120 000 руб.
+												+btn({
+													name: 'Подробнее',
+													class: 'btn_arr',
+												})
+						.gallery_bottomNav 
+							.other_scrollbar.gallery_scrollbar 
+							.other_pagination.gallery_pagination

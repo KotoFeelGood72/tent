@@ -1,0 +1,43 @@
+extends _layout
+
+block vars
+	- array = {body_class:'light', layout_mod:'', sub_keywords:'', title_inner:'Tents - contacts Website'}
+block content_block
+	+bread(['Главная'], 'Контакты', {visible: true})
+	section.pageContacts(data-aos="fade-up") 
+		.section_in 
+			.pageContacts_main 
+				.pageContacts_content 
+					ul.pageContacts_info 
+						-
+							let contacts = [
+								{
+									label: 'Телефон:',
+									val: '+7 (000) 000 00 00'
+								},
+								{
+									label: 'Почта:',
+									val: 'mail@mail.ru'
+								},
+								{
+									label: 'Адрес:',
+									val: 'г.Краснодар, ул.Солнечная 25 д.1 кв.23'
+								}
+							]
+						each item in contacts 
+							li.pageContacts_item 
+								span=item.label 
+								a(href="#")=item.val
+					.pageContacts_social 
+						span Соцсети:
+						ul 
+							each item in ['wa', 'tg', 'vk']
+								li 
+									a(href="#")
+										+icon(item)
+					+btn({
+						name: 'Оставить заявку',
+						class: 'btn_arr'
+					})
+				.pageContacts_map 
+					#map

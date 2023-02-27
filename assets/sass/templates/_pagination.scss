@@ -1,0 +1,67 @@
+.pag_block {
+	margin-top: $m10;
+	@include bp($point_2) {
+		margin-top: 6rem;
+	}
+	@include bp($point_4) {
+		margin-top: 4rem;
+	}
+}
+.pag_list {
+	@include flex-start;
+}
+.pag_item {
+	width: 5.4rem;
+	height: 5.4rem;
+	@include bp($point_4) {
+		width: 4.5rem;
+		height: 4rem;
+	}
+	a {
+		width: 100%;
+		height: 100%;
+		@include flex-center;
+		font-size: 2.2rem;
+		font-family: $font_2;
+		font-weight: 500;
+
+		@include bp($point_2) {
+			font-size: 1.8rem;
+		}
+		@include bp($point_4) {
+			font-size: 1.6rem;
+		}
+		
+		&:hover {
+			background-color: $dark-light;
+		}
+	}
+}
+.prev_mod {
+	opacity: .7;
+	transform: rotate(90deg);
+}
+.pag_link {
+}
+.icon-arrow-pagination-left {
+}
+.active_mod {
+	background-color: $dark-light;
+}
+.dots_mod {
+}
+.next_mod {
+	opacity: .7;
+}
+.icon-arrow-pagination-right {
+}
+
+.dots_mod, .next_mod, .prev_mod {
+	&:hover {
+		background-color: $trans!important;
+	}
+}
+
+.next_mod, .prev_mod  {
+	opacity: 1;
+}

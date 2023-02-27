@@ -1,0 +1,23 @@
+extends _layout
+
+block vars
+	- array = {body_class:'light', layout_mod:'', sub_keywords:'', title_inner:'Tents - Website " Work "'}
+block content_block
+	+bread(['Главная'], 'Портфолио', {visible: true})
+	section.pageWork 
+		.section_in 
+			ul.pageWork_grid.mod_grid_2
+				-for(i = 0; i < 6; i++)
+						li(data-aos="fade-up") 
+							a(href="#")
+								.workCard_img 
+									img(src="i/gallery/gallery_0.jpg", alt="")
+									.workCard_link 
+										p Подробнее
+										+icon('arrow-right-work')
+								.workCard_title 
+									h3 Название проекта
+			+pagination({
+				pages:6,
+				arrows:true
+				})

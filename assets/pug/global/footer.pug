@@ -1,0 +1,32 @@
+footer.footer(data-aos="fade-in")
+	.section_in 
+		.footer_main
+			.footer_main_head 
+				.footer_col_info 
+					.footer_logo 
+						a(href="/")
+							img(src="i/logo.svg", alt="")
+					.footer_txt Занимаемся розничной и оптовой продажей мобильных шатров и пляжных зонтов более 7 лет. Доставляем товар по России и странам СНГ.
+				.footer_col_nav 
+					ul.footer_nav 
+						each item in ['Каталог', 'Шатры', 'Пляжные зонты', 'Тенты', 'Аксессуары']
+							li 
+								a(href="#")=item 
+					ul.footer_nav 
+						each item in ['Меню', 'Услуги', 'Портфолио', 'Контакты']
+							li 
+								a(href="#")=item
+					.footer_contacts_w 
+						p Контакты
+						ul.footer_contacts 
+							each item in ['8 (989) 822 88 36', '8 (988) 335 33 92', 'mail@mail.ru', 'г.Краснодар, ул.Солнечная 25 д.2 кв.21']
+								li 
+									a(href="#")=item
+			.footer_main_bottom
+				.footer_bottomCol_left
+					.footer_copyright © 2022 Все права защищены
+					.footer_policy
+						a(href="/") Политика конфиденциальности
+				.footer_arkada 
+					a(href="/policy.html")
+						img(src="i/arkada.png", alt="")

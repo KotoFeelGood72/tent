@@ -1,0 +1,36 @@
+.mod_grid_3 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	grid-gap: 6rem 3rem;
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+		grid-gap: 3rem;
+	}
+	@include bp($point_4) {
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+		grid-gap: 1rem;
+	}
+}
+
+.mod_grid_2 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+	grid-gap: 6rem 3rem;
+	@include bp($point_2) {
+		grid-gap: 3rem;
+	}
+	@include bp($point_4) {
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+		grid-gap: 1rem;
+	}
+
+	.subcat_img {
+		height: 44.5rem;
+		@include bp($point_2) {
+			max-height: 25rem;
+		}
+		@include bp($point_4) {
+			max-height: 15rem;
+		}
+	}
+}

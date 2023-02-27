@@ -1,0 +1,27 @@
+extends _layout
+
+block vars
+	- array = {body_class:'light', layout_mod:'', sub_keywords:'', title_inner:'Tents - Website " Products "'}
+block content_block
+	+bread(['Главная', 'Каталог', 'Мобильные шатры'], 'Шатры для свадеб и банкетов', {visible: true})
+	section.products 
+		.section_in 
+			ul.products_grid.mod_grid_3 
+				-for(i = 0; i < 12; i++)
+					li.products_item(data-aos="fade-up") 
+						a(href="#")
+							.products_item_img 
+								img(src="i/products.jpg", alt="")
+							.products_item_content
+								h3 Шатер для свадьбы 209
+								span 200 кв.м.
+								p 120 000 руб.
+								+btn({
+									name: 'Подробнее',
+									class: 'btn_arr',
+								})
+			+pagination({
+				pages:6,
+				arrows:true
+				})
+			+seo({class: 'm10'})

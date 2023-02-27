@@ -1,0 +1,18 @@
+extends _layout
+
+block vars
+	- array = {body_class:'light', layout_mod:'', sub_keywords:'', title_inner:'Tents - Category Website'}
+block content_block
+	+bread(['Главная', 'Каталог'], 'Мобильные шатры', {visible: true})
+	section.shop 
+		.section_in 
+			.shop_main 
+				ul.shop_grid.mod_grid_3
+					-for(i = 0; i < 16; i++)
+						- let prodImg = 'subcategory_' + i 
+						- let prodName = ['Мобильные шатры', 'Шатры для свадеб и банкетов', 'Шатры-трансформеры', 'Шатры для городских мероприятий', 'Шатры для торговли и ярмарки', 'Шатры для автоспорта и мотоспорта', 'Шатры для выставок', 'Торговые шатры', 'Шатры для кафе и ресторанов', 'Шатры для дома и дачи', 'Шатры для рыбалки и охоты', 'Шатры раздвижные', 'Ритуальные шатры', 'Военные шатры', 'Шатры для автомобиля', 'Шатры садовые']
+							+sub({
+								img: prodImg,
+								name: prodName[i]
+							})
+	+seo({class: 'm10'})
