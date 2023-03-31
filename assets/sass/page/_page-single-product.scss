@@ -280,6 +280,8 @@
 					visibility: hidden;
 					transition: all .3s ease;
 
+					@include flex-center;
+
 					&.invert {
 						color: $dark;
 					}
