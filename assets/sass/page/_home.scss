@@ -670,3 +670,19 @@
 }
 .trust_slide {
 }
+
+.wpcf7-response-output, .wpcf7-spinner, .wpcf7-not-valid-tip {  
+	display: none;
+}
+.wpcf7-not-valid {  
+	border: 0.1rem solid #ff0000 !important;
+}
+// .close_main p, form input {
+// 	  color: #000 !important;
+// 	}
+.btn input[type=submit] {
+		border: none;  
+		cursor: pointer;  
+		width: 100%;  
+		font-size: $font_size_base;
+	}
