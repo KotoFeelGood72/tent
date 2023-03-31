@@ -672,7 +672,7 @@
 }
 
 .wpcf7-response-output, .wpcf7-spinner, .wpcf7-not-valid-tip {  
-	display: none;
+	display: none!important;
 }
 .wpcf7-not-valid {  
 	border: 0.1rem solid #ff0000 !important;
